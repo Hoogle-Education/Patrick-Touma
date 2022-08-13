@@ -1,0 +1,42 @@
+class Pessoa {
+
+  String nome;
+  int idade;
+  double altura;
+  double quantia;
+  double media;
+
+  double somar(double a, double b) {
+    return a + b;
+  }
+
+  double calculaMedia(double a, double b) {
+    media = (a+b)/2.0;
+    return media;
+  }
+}
+
+public class Program {
+
+  public static void main(String[] args) {
+
+    Pessoa joao = new Pessoa();
+    Pessoa maria = new Pessoa();
+
+    joao.nome = "Joao da Silva";
+    joao.idade = 15;
+    joao.altura = 1.70;
+    joao.quantia = 100.0;
+
+    
+    maria.nome = "Maria da Silva";
+    maria.idade = 15;
+    maria.altura = 1.70;
+    maria.quantia = 100.0;
+
+    System.out.println( joao.media );
+    System.out.println( "media do joao = " + joao.calculaMedia(10, 8) );
+
+  }
+
+}

@@ -1,0 +1,57 @@
+class Pessoa {
+
+  String nome;
+  private int idade;
+  double altura;
+  double quantia;
+  double media;
+  
+  void fazerAniversario() {
+	idade++; // aumenta em 1  
+  }
+  
+  double somar(double a, double b) {
+    double soma = a + b;
+    return soma;
+  }
+
+  double calculaMedia(double a, double b) {
+    media = (a+b)/2.0;
+    return media;
+  }
+}
+
+public class Program {
+
+  public static void main(String[] args) {
+
+    Pessoa joao = new Pessoa();
+    Pessoa maria = new Pessoa();
+
+    joao.nome = "Joao da Silva";
+    joao.idade = 15;
+    joao.altura = 1.70;
+    joao.quantia = 100.0;
+    
+    maria.nome = "Maria da Silva";
+    maria.idade = 15;
+    maria.altura = 1.70;
+    maria.quantia = 100.0;
+
+    System.out.println( "calculando media... " + joao.calculaMedia(10, 8) );
+    
+    joao.fazerAniversario();
+
+    joao.idade = -20;
+    joao.nome = "teste";
+    joao.altura = 10000000.0;
+    
+    System.out.println(joao.nome);
+    System.out.println(joao.idade);
+    System.out.println(joao.altura);
+    System.out.println(joao.quantia);
+    System.out.println(joao.media);
+    
+  }
+
+}
